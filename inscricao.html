@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unifavip Play</title>
+    <link rel="icon" href="../IMG/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="../JS/main.js"></script>
+    <script src="https://kit.fontawesome.com/c771e31f5f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Inicio do Header-->
+<header class="menu">
+    <div class="logo">
+        <a class="logo" href="index.html"><img class="logoimg" src="../IMG/UNIFAVIP PLAY.svg"></a>
+    </div>
+    
+    <nav class="link">
+        <div class="darkmode-button">
+            <input type="checkbox" class="darkmode-box" id="chk">
+
+            <label onclick="darkmodeinscricao()" class="darkmode-label" for="chk">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+        <ul class="ul-link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="inscricao.html">Inscrição</a></li>
+        </ul>
+        <button class="mobile_menu"></button>       
+    </nav>
+</header>
+<!-- Fim do Header-->
+<!-- Início do Main-->
+<!-- Início do Formulário de Contato -->
+<main class="inscricao-center">
+    <section class="section-inscricao">
+        <form id="form" class="form" action="" method="post">   
+            <div class="input-box">
+                <label>Nome completo</label>
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="input-box">
+                <label>Matrícula</label>
+                <input type="text" name="Matrícula" placeholder="Digite sua Matrícula" required>
+            </div>
+        
+            <div class="column">
+                <div class="input-box">
+                    <label>E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>  
+
+                <div class="input-box">
+                    <label>Nickname</label>
+                    <input type="text" name="Nickname" placeholder="Digite seu Nickname" required>
+                </div>       
+            </div>
+        
+            <div class="input-box">         
+                <label>Selecione o Jogo</label>                        
+                <div class="column">            
+                    <div class="select-box">                  
+                        <select name="aprender" required>                       
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="lol">League of Legends</option>
+                            <option value="valorant">Valorant</option>
+                            <option value="cs">CS 2</option>
+                            <option value="eafc">EA FC 24</option>                   
+                        </select>                  
+                    </div>                     
+                </div>       
+            </div>
+       
+            <label class="naoexibir">
+                <span>Não preencher:</span><br>
+                <input type="text" name="url" value=""></p>
+            </label> 
+  
+            <div class="input-box"> 
+                <textarea name="mensagem" placeholder="Matricula dos Integrantes do Time " cols="30" rows="3" required></textarea>         
+            </div>       
+            <button type="submit">Enviar Dados</button>
+        </form>
+    </section>
+<!-- Fim do Formulário de Contato -->
+</main>
+<!-- Fim do Main-->
+<!-- Início do Footer-->
+    <footer class="rodape">
+        <div class="endereco">
+            <div class="social">
+                <a href="https://www.instagram.com/computacaounifavip_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/unifavipwyden" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>             
+            </div>
+            <p>©Desenvolvido por João Pedro Torres, Matheus de Macedo Pacheco e Douglas Chalegre©</p>           
+        </div>
+    </footer>
+<!--Fim do Footer-->
+
+</body>
+</html>

@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+html {
+    width: auto;
+    height: auto;
+    min-width: 400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;   
+}
+
+body{ 
+    background-color: azure;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: #666464;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    color: white;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: black;
+}
+
+/* Início do Header */
+
+/* Botão do Dark Mode */
+.darkmode-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.darkmode-box{
+    opacity: 0;
+    position: absolute;
+}
+
+.darkmode-label {
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 7px;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    transform: scale(1.5);
+}
+
+.ball {
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    
+    left: 3px;
+    width: 25px;
+    height: 25px;
+
+    transform: translateX(0px);
+    transition: transform 0.3s linear;
+}
+
+.darkmode-box:checked + .darkmode-label .ball {
+    transform: translateX(28px);
+}
+
+.fa-sun {
+    color: #f1c40f;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+/* Botão do Dark Mode */
+
+.menu {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.menu.dark {
+    background-color: #2b2727;
+}
+
+.logo {
+    display: flex;
+    width: 20%;
+    z-index: 2;
+}
+
+.logo img{
+    width: 150px;
+    height: 70px;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    margin-inline: auto;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link.dark {
+    background-color: #2b2727;  
+}
+.link.dark a {
+    color: white;
+}
+
+.ul-link {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.link a{
+    justify-content: flex-end;
+    padding: 10px;
+    text-decoration: none;
+    align-items: center;
+    margin-left: 10px;
+    color: black;
+    margin-right: 10px;
+    font-size: 26px;
+    margin-bottom: 1px;
+}
+
+.link a:hover{
+    border-bottom: 2px solid #5b91ca;
+    color: #5b91ca;
+}
+
+.mobile_menu {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+}
+
+.mobile_menu::before, .mobile_menu::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+/* Fim do Header */
+
+/* Começo do Rodapé */
+.rodape {
+    display: flex;
+    background-color: white;
+    height: 160px;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    min-width: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: end;
+}
+
+.rodape.dark {
+    background-color: #2b2727;
+}
+
+.rodape.dark i{
+    color:white;
+}
+
+.rodape.dark i:hover {
+    color: gray;
+}
+
+.rodape.dark p {
+    color: white;
+}
+
+.social {
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.social i{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
+}
+
+.social i:hover {
+    color: lightgrey;
+    transition: .4s;
+}
+
+.rodape i{
+    color: black;
+}
+
+/* Fim do Rodapé */
+
+/* Início do Main index.html */
+.banner-index {
+    margin-top: 78px;
+    width: 100%;
+    height: auto;
+    min-width: 400px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-texto {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    left: 5%;
+    width: 40%;
+    height: 70%;
+}
+
+.banner-texto.dark {
+    color: white;
+}
+
+.banner-texto h6 {
+    font-size: 6vw;
+}
+
+.banner-texto h1 {
+    font-size: 2vw;
+    padding-top: 5%;
+}
+
+.banner-texto h2 {
+    font-size: 3vw;
+    padding-top: 15%;
+}
+
+
+/* Inicio do Section Game */
+.game {
+    width: 100%;
+    height: 100%;
+    min-width: 400px;
+}
+
+.titulo-game {
+    display: flex;
+    justify-content: center;
+    background-color:#2b2727;
+    font-size: 4vw;
+    color: white;
+}
+
+
+.div-jogos {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-image: url(../IMG/bg-section-game.svg);
+    background-repeat: no-repeat;
+    border: 10px solid #2b2727;
+}
+
+.div-jogos a {
+    width: 250px;
+    height: 350px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    background-color: #333;
+    border: 2px solid black;
+}
+
+.div-jogos a p {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.div-jogos img {
+    width: 100%;
+    height: auto;
+
+}
+
+.div-jogos a:hover{
+    border: 2px solid #5b91ca;
+    transition: 0.5s;
+    box-shadow: 10px 10px 5px black;
+}
+  
+
+.slider-index {
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;   
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    margin-bottom: 5%;
+}
+
+.slide-input{
+    display: none   
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.bar:hover{
+    background-color: white;
+}
+
+.slider-align {
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    min-width: 400px;
+}
+
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+
+
+/* Fim do Section Game */
+/* Fim do Main index.html */
+
+/* Início do Main sobre.html */
+
+.banner-sobre {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+}
+
+.banner-sobre iframe {
+    margin-top: 4%;
+    width: 100%;
+}
+
+.section-sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.section-sobre.dark {
+    color: white;
+}
+
+.section-sobre p {
+    padding-top: 2vw;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.section-sobre h6{
+    padding-top: 1vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.section-sobre h2 {
+    padding-top: 5vw;
+    font-size: 2vw;
+}
+
+.slider-sobre {
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    position: relative;   
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    margin-bottom: 5%;
+}
+.slide-input{
+    display: none   
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.bar:hover{
+    background-color: white;
+}
+
+.slider-align {
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+/* Fim do Main sobre.html */
+
+/* Início do Main inscricao.html */
+
+.inscricao-center {
+    display: flex;
+    justify-content: center;
+}
+
+.section-inscricao {
+    margin-top: 78px;
+    margin-bottom: 1%;
+    position: relative;
+    max-width: 700px;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    background-color: #FFF;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-inscricao.dark {
+    background-color: black;
+}
+
+.section-inscricao.dark label {
+    color: white;
+}
+  
+.section-inscricao .form {
+    margin-top: 0px;
+}
+  
+.form .input-box {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+}
+  
+.input-box label {
+    color: #000;
+}
+  
+.form :where(.input-box input, .select-box) {  
+    position: relative;
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 5px;
+    border: 1px solid #A4E3F0;
+    border-radius: 6px;
+    padding: 0 15px;
+    background: #E9F8FB;
+  
+}
+  
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+  
+.form :where(.input-box textarea) {
+    
+    position: relative;
+    height: 250px;
+    width: 100%;
+    outline: none;
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 5px;
+    border: 1px solid #A4E3F0;
+    border-radius: 6px;
+    padding: 10px;
+    background: #E9F8FB;
+    resize: none;
+}
+  
+.input-box textarea:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+  
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+  
+.form .gender-box {
+    margin-top: 10px;
+}
+  
+.form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+  
+.form .gender {
+    column-gap: 5px;
+}
+  
+.gender input { 
+    accent-color: #007CFF;
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+  
+.form :where(.gender input,.gender textarea, .gender label) {
+    cursor: pointer;
+}
+  
+.gender label {
+    color: #000;
+}
+  
+.address :where(input, .select-box) {
+    margin-top: 10px;
+}
+  
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #808080;
+    font-size: 1em;
+    background: #e9f8fb;
+}
+  
+.form button {
+    height: 40px;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #007cff;
+}
+  
+.form button:hover {
+    background: #28D1F2;
+}
+  
+  /*Anti-span*/
+.naoexibir { display:none; }
+/* Fim do Main inscricao.html */
+
+/* Começo do Main da Página dos Jogos */
+.main-gamepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-gamepage {
+    display: flex;
+    margin-top: 78px;
+    margin-bottom: 1%;
+    width: 90%;
+    height: 700px;
+}
+
+.section-gamepage.dark h1 {
+    color: black;
+}
+
+.partidas-gamepage {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 30%;
+}
+
+.partida-gamepage {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    height: 20%;
+    font-size: 36px;
+}
+
+.game1{
+    background: linear-gradient(45deg,#C20707 50%,grey 50%)   
+}
+.game2{
+    background: linear-gradient(45deg,#9C8703 50%, #586BEA 50%)   
+}
+.game3{
+    background: linear-gradient(45deg,#6B0303 50%, #fb0254 50%) 
+}
+.game4{
+    background: linear-gradient(45deg, #5C046C 50%, #B65107 50%) 
+}
+.game5{
+    background: linear-gradient(45deg, #001538 50%, #00AEEF 50%) 
+}
+
+.partida-gamepage img {
+    width: 100px;
+    height: 90px;
+}
+
+.partida-gamepage h1 {
+    color: white;
+}
+
+.partidas-info {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    width: 50%;
+    min-width: 30%;
+}
+
+.partida-info {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partida-info-titulo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #333;
+    font-size: 30px;
+    color: white;
+}
+
+.partida-info-texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #808080;
+    border-bottom: 1px solid black;
+    height: 100%;
+    color: white;
+}
+
+.partida-info-texto h1 {
+    text-align: center;
+    width: 160px;
+    font-size: 30px;
+}
+
+.lol-bg {
+    background-image: url("../IMG/background-lol.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.val-bg {
+    background-image: url("../IMG/background-val.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cs-bg {
+    background-image: url("../IMG/background-cs.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.eafc-bg {
+    background-image: url("../IMG/background-eafc.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Fim do Main da Página dos Jogos */

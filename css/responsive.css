@@ -1,0 +1,208 @@
+/* 768px */
+@media only screen and (max-width: 768px){
+    /* Mobile-Menu */
+    .ul-link{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        min-width: 400px;
+        min-height: 400px;
+        background-color: white;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        clip-path: circle(100px at 90% -25%);
+        transition: 1s ease-out;
+        pointer-events: none;
+    }
+
+    .ul-link.dark {
+        background-color: #2b2727
+    }
+
+    .mobile_menu {
+        display: block;
+        z-index: 1;
+    }
+
+    nav.active .ul-link { 
+        clip-path: circle(1500px at 90% -20%);
+        pointer-events: all;
+    }
+
+    nav.active .mobile_menu {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    nav.active .mobile_menu::before {
+        transform: rotate(132deg);
+    }
+
+    nav.active .mobile_menu::after {
+        transform: rotate(-132deg);
+        top: -7px;
+    }
+    /* // Mobile-Menu */
+
+    /* Página Index */
+    .div-jogos {
+        flex-wrap: wrap;
+    }
+
+    .darkmode-button {
+        margin-right: 10%;
+    }
+
+    .titulo-game {
+        font-size: 40px;
+    }
+
+    .banner-texto h6 {
+        font-size: 37px;
+    }
+    .banner-texto h1 {
+        font-size: 15px;
+        padding-top: 2%;
+        text-wrap: nowrap;
+    }
+    .banner-texto h2 {
+        font-size: 20px;
+        padding-top: 5%;
+        text-wrap: nowrap;
+    }
+    /* // Página Index */
+    /*  Página Sobre */
+    .section-sobre p {
+        padding-top: 2vw;
+        text-align: center;
+        font-size: 6vw;
+    }
+    
+    .section-sobre h6{
+        padding-top: 2vw;
+        text-align: center;
+        font-size: 2.5vw;
+    }
+    
+    .section-sobre h2 {
+        padding-top: 5vw;
+        font-size: 4vw;
+    }
+    /* // Página Sobre */
+    /* Rodapé */
+    .social i {
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }     
+    /* // Rodapé */
+}
+/* 768px */
+
+/* Página dos Jogos */
+@media only screen and (max-width: 1100px){
+    .vs {
+        display: none;
+    }
+
+    .partida-gamepage img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .partida-gamepage h1 {
+        font-size: 5vw;
+    }
+
+   .partida-info-titulo {
+        font-size: 2vw;
+   }
+
+   .partida-info-texto h1 {
+    text-align: center;
+    width: 160px;
+    font-size: 3vw;
+}
+}
+
+.partida-gamepage-resp {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    height: 20%;
+    font-size: 36px;
+}
+
+.partida-gamepage-resp img {
+    margin-left: 10%;
+    width: 70px;
+    height: 60px;
+}
+
+.partida-gamepage-resp h1 {
+    margin-left: 20%;
+    font-size: 30px;
+    color: white;
+}
+
+.partida-gamepage-resp .time1 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 4%;
+}
+
+.partida-gamepage-resp .time2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+@media only screen and (max-width: 700px){
+    .partida-gamepage {
+        display:none
+    }
+
+    .partida-gamepage-resp {
+        display: flex;
+    }
+
+    .game1{
+        background: linear-gradient(180deg,#C20707 50%,grey 50%)   
+    }
+    .game2{
+        background: linear-gradient(180deg,#9C8703 50%, #586BEA 50%)   
+    }
+    .game3{
+        background: linear-gradient(180deg,#6B0303 50%, #fb0254 50%) 
+    }
+    .game4{
+        background: linear-gradient(180deg, #5C046C 50%, #B65107 50%) 
+    }
+    .game5{
+        background: linear-gradient(180deg, #001538 50%, #00AEEF 50%) 
+    }
+}
+
+
+/* // Página dos Jogos */
+
+
+@media only screen and (max-width: 1280px){
+    .div-jogos a {
+        width: 150px;
+        height: 200px;
+    }
+
+    .div-jogos a p {
+        font-size: 25px;
+    }
+}  

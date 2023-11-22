@@ -1,6 +1,6 @@
-/* 768px */
+/* Início da Página Index */
 @media only screen and (max-width: 768px){
-    /* Mobile-Menu */
+    /* Início do Mobile-Menu */
     .ul-link{
         position: fixed;
         top: 0;
@@ -40,6 +40,10 @@
         border-top-color: transparent;
     }
 
+    .link.dark.active .mobile_menu {
+        border-top-color: transparent;
+    }
+
     nav.active .mobile_menu::before {
         transform: rotate(132deg);
     }
@@ -48,15 +52,13 @@
         transform: rotate(-132deg);
         top: -7px;
     }
-    /* // Mobile-Menu */
-
-    /* Página Index */
+    /* Fim do Mobile-Menu */
     .div-jogos {
         flex-wrap: wrap;
     }
 
     .darkmode-button {
-        margin-right: 10%;
+        margin-right: 20%;
     }
 
     .titulo-game {
@@ -76,44 +78,73 @@
         padding-top: 5%;
         text-wrap: nowrap;
     }
-    /* // Página Index */
-    /*  Página Sobre */
+}
+
+@media only screen and (max-width: 1280px){
+    .div-jogos a {
+        width: 150px;
+        height: 200px;
+    }
+
+    .div-jogos a p {
+        font-size: 25px;
+    }   
+}  
+
+@media only screen and (max-width: 415px){
+    .banner-texto {
+        top: 10%;
+    }
+}
+@media only screen and (max-width: 375px){
+    .banner-texto {
+        top: 12%;
+    }
+}
+
+
+/* Fim da Página Index */
+
+/* Início da Página Sobre */
+@media only screen and (max-width: 768px){
     .section-sobre p {
         padding-top: 2vw;
         text-align: center;
         font-size: 6vw;
+        text-wrap: wrap;
     }
     
     .section-sobre h6{
         padding-top: 2vw;
         text-align: center;
         font-size: 2.5vw;
+        text-wrap: wrap;
     }
     
     .section-sobre h2 {
         padding-top: 5vw;
         font-size: 4vw;
+        text-wrap: wrap;
     }
-    /* // Página Sobre */
-    /* Rodapé */
+
+    .main-sobre {
+        width: 100vw;
+    }
+
+}
+/* Fim da Página Sobre */
+
+
+/* Início do Rodapé */
+@media only screen and (max-width: 768px){
     .social i {
         margin-left: 15px;
         margin-right: 15px;
+    } 
+}     
+/* Fim do Rodapé */
 
-    }     
-    /* // Rodapé */
-}
-/* 768px */
-
-/* 375px */
-@media only screen and (max-width: 375px) {
-    .link {
-        width: 65%
-    }   
-}
-/* 375px */
-
-/* Página dos Jogos */
+/* Página dos Jogos ("jogo"_page.html) */
 @media only screen and (max-width: 1100px){
     .vs {
         display: none;
@@ -136,7 +167,7 @@
     text-align: center;
     width: 160px;
     font-size: 3vw;
-}
+    }
 }
 
 .partida-gamepage-resp {
@@ -199,18 +230,4 @@
         background: linear-gradient(180deg, #001538 50%, #00AEEF 50%) 
     }
 }
-
-
-/* // Página dos Jogos */
-
-
-@media only screen and (max-width: 1280px){
-    .div-jogos a {
-        width: 150px;
-        height: 200px;
-    }
-
-    .div-jogos a p {
-        font-size: 25px;
-    }
-}  
+/* // Página dos Jogos */  

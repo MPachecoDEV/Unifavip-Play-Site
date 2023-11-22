@@ -3,7 +3,6 @@
 html {
     width: auto;
     height: auto;
-    min-width: 400px;
 }
 
 * {
@@ -16,6 +15,10 @@ html {
 body{ 
     background-color: azure;
     transition: background 0.2s linear;
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 body.dark {
@@ -23,7 +26,6 @@ body.dark {
 }
 
 header{
-    position: fixed;
     display: flex;
     color: white;
     align-items: center;
@@ -101,6 +103,7 @@ header{
     z-index: 1;
     position: fixed;
     width: 100%;
+    height: auto;
     background-color: white;
 }
 
@@ -140,6 +143,18 @@ header{
     color: white;
 }
 
+.link.dark .mobile_menu {
+    border-top-color: white;
+}
+
+.link.dark .mobile_menu::before {
+    background-color: white;
+}
+
+.link.dark .mobile_menu::after {
+    background-color: white;
+}
+
 .ul-link {
     display: flex;
     gap: 32px;
@@ -169,6 +184,7 @@ header{
     background: none;
     border-top: 3px solid black;
     cursor: pointer;
+    margin-right: 10%;
 }
 
 .mobile_menu::before, .mobile_menu::after {
@@ -423,11 +439,10 @@ header{
     position: relative;
     display: flex;
     justify-content: center;
-    min-width: 400px;
 }
 
 .banner-sobre iframe {
-    margin-top: 4%;
+    margin-top: 78px;
     width: 100%;
 }
 
